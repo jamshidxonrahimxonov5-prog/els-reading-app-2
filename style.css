@@ -1,0 +1,84 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, 'Times New Roman', serif; background: #eef2f5; color: #1f2933; line-height: 1.7; padding: 20px; }
+.container { max-width: 880px; margin: 0 auto; background: #ffffff; border: 1px solid #cfd8e0; border-radius: 8px; padding: 42px; box-shadow: 0 4px 16px rgba(30, 60, 90, 0.08); }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #e0e8ee; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.9em; color: #5a6b7b; }
+.topbar .level { background: #e4eef5; padding: 4px 12px; border-radius: 12px; color: #2d5a7b; font-weight: 600; font-size: 0.85em; }
+.topbar .progress { font-weight: 600; color: #2e8b57; }
+h1 { font-size: 1.55em; color: #1e4d6b; padding-bottom: 12px; margin-bottom: 24px; text-align: center; letter-spacing: 0.3px; }
+.passage { background: #f4f8fb; border: 1px solid #cfe0eb; border-left: 4px solid #4a90b8; padding: 24px; margin-bottom: 32px; text-align: justify; border-radius: 4px; }
+.exercise { margin-bottom: 34px; }
+.ex-title { font-weight: bold; color: #1e4d6b; margin-bottom: 16px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px; }
+.item { margin-bottom: 14px; }
+.gap-text { font-size: 1em; line-height: 2.1; }
+.gap-label { display: inline-block; font-weight: bold; color: #2d5a7b; min-width: 32px; font-family: 'Segoe UI', Arial, sans-serif; }
+.gap-input { display: inline-block; font-family: Georgia, serif; font-size: 0.95em; padding: 2px 8px; border: none; border-bottom: 1.5px dashed #7a9ab8; background: transparent; text-align: center; min-width: 130px; color: #1f2933; transition: all 0.2s; }
+.gap-input:focus { outline: none; border-bottom: 2px solid #4a90b8; background: #f0f7fb; }
+.gap-input.correct { border-bottom: 2px solid #2e8b57; background: #e8f5ec; color: #1e5c35; font-weight: bold; }
+.gap-input.wrong { border-bottom: 2px solid #c0392b; background: #fbeaea; color: #8a2a20; }
+.gap-feedback { font-size: 0.9em; margin-left: 4px; font-family: Arial, sans-serif; font-weight: bold; }
+.gap-feedback.ok { color: #2e8b57; }
+.gap-feedback.no { color: #c0392b; }
+.gap-answer { font-size: 0.88em; color: #2e8b57; font-style: italic; margin-left: 6px; }
+.mcq-num { font-weight: bold; margin: 20px 0 8px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.96em; }
+.mcq-option { display: block; padding: 8px 12px; margin-bottom: 4px; cursor: pointer; border-radius: 4px; font-size: 0.95em; border: 1px solid transparent; transition: background 0.15s; }
+.mcq-option:hover { background: #f0f6fa; }
+.mcq-option input { margin-right: 10px; }
+.mcq-option.correct { background: #e8f5ec; border-color: #a8d5b8; color: #1e5c35; }
+.mcq-option.wrong { background: #fbeaea; border-color: #e8b4b0; color: #8a2a20; }
+.submit-btn { font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.92em; font-weight: 600; padding: 10px 26px; background: #2d5a7b; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-top: 14px; transition: background 0.2s; letter-spacing: 0.3px; }
+.submit-btn:hover { background: #3d7aa3; }
+.result { font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.92em; margin-top: 12px; padding: 10px 14px; border-radius: 5px; display: none; font-weight: 600; }
+.result.show { display: block; }
+.result.pass { background: #e8f5ec; color: #1e5c35; border: 1px solid #a8d5b8; }
+.result.fail { background: #fff4e0; color: #8a5a1a; border: 1px solid #f0d090; }
+.nav-buttons { display: flex; gap: 12px; margin-top: 44px; }
+.nav-btn { flex: 1; font-family: 'Segoe UI', Arial, sans-serif; font-size: 1em; font-weight: 600; padding: 15px; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; letter-spacing: 0.4px; }
+.prev-btn { background: #e4eef5; color: #2d5a7b; }
+.prev-btn:hover { background: #d0e0ec; }
+.next-btn { background: #2e8b57; color: #fff; }
+.next-btn:hover:not(:disabled) { background: #3aa86a; }
+.next-btn:disabled { background: #c2cbd3; color: #7a8a9a; cursor: not-allowed; }
+.nav-btn small { display: block; font-size: 0.75em; font-weight: 400; opacity: 0.9; margin-top: 3px; }
+.welcome { text-align: center; padding: 40px 20px; }
+.welcome h1 { font-size: 2em; margin-bottom: 16px; }
+.welcome p { color: #5a6b7b; margin-bottom: 30px; font-size: 1.05em; }
+.unit-list { margin-top: 24px; text-align: left; }
+.unit-list h3 { color: #2d5a7b; margin: 20px 0 10px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px; }
+.unit-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; margin-bottom: 6px; border: 1px solid #e0e8ee; border-radius: 5px; cursor: pointer; transition: all 0.15s; font-family: 'Segoe UI', Arial, sans-serif; }
+.unit-item:hover { background: #f4f8fb; border-color: #4a90b8; }
+.unit-item.locked { opacity: 0.5; cursor: not-allowed; background: #f8f9fa; }
+.unit-item.locked:hover { background: #f8f9fa; border-color: #e0e8ee; }
+.unit-item.completed { border-left: 4px solid #2e8b57; background: #f4faf6; }
+.unit-item .unit-num { font-weight: bold; color: #1e4d6b; min-width: 50px; }
+.unit-item .unit-title { flex: 1; color: #1f2933; font-size: 0.95em; }
+.unit-item .unit-status { font-size: 0.85em; font-weight: 600; }
+.unit-item.completed .unit-status { color: #2e8b57; }
+.unit-item:not(.completed) .unit-status { color: #9aa9b5; }
+@media (max-width: 600px) { .container { padding: 22px; } .gap-input { min-width: 90px; } .nav-buttons { flex-direction: column; } }
+
+/* Highlight va Note uchun */
+.highlighted {
+  background-color: #fff3b0 !important;
+  cursor: pointer;
+}
+.custom-note-box {
+  background: #fff9e6;
+  border-left: 4px solid #e6b800;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.9em;
+  color: #555;
+  border-radius: 4px;
+  position: relative;
+}
+.note-delete {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.note-delete:hover { color: #ff0000; }
